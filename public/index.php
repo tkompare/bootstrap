@@ -71,6 +71,7 @@
 			</div>
 		</div>
 	</div>
+	<form action="index.php" method="post">
 	<div class="container-fluid">
 		<div id="section-location" class="row-fluid">
 			<div class="span12">
@@ -84,9 +85,22 @@
 						<p><a id="uselocation" class="btn btn-small">Use this location &raquo;</a></p>
 					</div>
 					<!--/span-->
-					<div id="heading-address" class="span6">
+					<div id="heading-address" class="span12">
 						<h2>Address</h2>
-						<p>Form elements that take in address information</p>
+						<div class="row-fluid">
+						<div class="address-input span6">
+						<label for="address-number">Number</label>
+						<input id="address-number" name="address[number]" type="text" class="address-input span6" placeholder="123">
+						<label for="address-direction">Direction</label>
+						<input id="address-direction" name="address[direction]" type="text" class="address-input span6" placeholder="W">
+						</div>
+						<div class="address-input span6">
+						<label for="address-streetname">Street Name</label>
+						<input id="address-streetname" name="address[streetname]" type="text" class="address-input span6" placeholder="Madison">
+						<label for="address-suffix">Street Suffix</label>
+						<input id="address-suffix" name="address[suffix]" type="text" class="address-input span6" placeholder="Ave">
+						</div>
+						</div>
 						<p><a id="seemap" class="btn btn-small">See Map &raquo;</a></p>
 					</div>
 					<!--/span-->
@@ -150,7 +164,7 @@
 		</footer>
 	</div>
 	<!--/.fluid-container-->
-	
+	</form>
 	<!-- Le javascript
 	    ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->

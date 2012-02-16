@@ -224,8 +224,12 @@ $(document).ready(function() {
 										theAddress = results[0].formatted_address;
 										if(isWithin49)
 										{
-										/*	addressArray = theAddress.split(" ");
-											$.mobile.changePage('address.php', {
+											addressArray = theAddress.split(" ");
+											$("#address-number").val(addressArray[0].replace(",",""));
+											$("#address-direction").val(addressArray[1].replace(",",""));
+											$("#address-streetname").val(addressArray[2].replace(",",""));
+											$("#address-suffix").val(addressArray[3].replace(",",""));
+										/*	$.mobile.changePage('address.php', {
 												type:'get',
 												data:'number='+addressArray[0].replace(",","")+
 													'&direction='+addressArray[1].replace(",","")+
@@ -235,11 +239,10 @@ $(document).ready(function() {
 												transition:'slide'
 											});
 										*/
-											alert(theAddress);
 										}
 										else
 										{
-											alert("Not in 49th Ward");
+											alert("We're sorry. This ocation is not in the 49th Ward.\r\n"+theAddress);
 										}
 									}
 									else
