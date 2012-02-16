@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Bootstrap, from Twitter</title>
+	<title>311 Servic.es</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
 	<meta name="description" content="">
 	<meta name="author" content="">
@@ -37,7 +37,7 @@
 	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container-fluid">
-				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse" href="#">
 					<span class="icon-bar"></span> 
 					<span class="icon-bar"></span> 
 					<span class="icon-bar"></span> 
@@ -45,10 +45,10 @@
 				<a class="brand" href="#">311 Servic.es</a>
 				<div class="nav-collapse">
 					<ul class="nav">
-						<li id="linav-home" class="active"><a id="thenav-home">Home</a></li>
-						<li id="linav-location"><a id="thenav-location">Location</a></li>
-						<li id="linav-service"><a id="thenav-service">Service</a></li>
-						<li id="linav-contact"><a id="thenav-contact">Contact</a></li>
+						<li id="linav-home" class="active"><a id="thenav-home" href="#">Home</a></li>
+						<li id="linav-location"><a id="thenav-location" href="#">Location</a></li>
+						<li id="linav-service"><a id="thenav-service" href="#">Service</a></li>
+						<li id="linav-contact"><a id="thenav-contact" href="#">Contact</a></li>
 					</ul>
 				</div>
 				<!--/.nav-collapse -->
@@ -66,7 +66,7 @@
 						<li>Give Us The Details</li>
 						<li>Enter Your Contact Information For Follow-Up</li>
 					</ol>
-					<p><a id="start" class="btn btn-success btn-small">Start <i class="icon-ok icon-white"></i></a></p>
+					<p><button id="start" type="button" class="btn btn-success btn-small">Start <i class="icon-ok icon-white"></i></button></p>
 				</div>
 			</div>
 		</div>
@@ -81,12 +81,12 @@
 						<div id="map-themap" style="width:95%; height:200px; margin:5px; auto;">
 						<!-- The Google map goes here. -->
 						</div>
-						<p><a id="uselocation" class="btn btn-primary btn-small">Use this location <i class="icon-ok icon-white"></i></a></p>
+						<p><a id="uselocation" class="btn btn-primary btn-small" href="#">Use this location <i class="icon-ok icon-white"></i></a></p>
 					</div>
 					<!--/span-->
 					<div id="heading-address" class="span12">
 						<h2>Address</h2>
-						<p><a id="seemap" class="btn btn-primary btn-small">Use GPS <i class="icon-map-marker icon-white"></i></a></p>
+						<p><a id="seemap" class="btn btn-primary btn-small" href="#">Use GPS <i class="icon-map-marker icon-white"></i></a></p>
 						<div class="row-fluid">
 						<div class="address-input span6">
 						<label for="address-number">Number</label>
@@ -100,7 +100,7 @@
 						<label for="address-suffix">Street Suffix</label>
 						<input id="address-suffix" name="address[suffix]" type="text" class="span9" placeholder="Ave">
 						</div>
-						<p><a id="toservice" class="btn btn-success btn-small">Continue <i class="icon-ok icon-white"></i></a></p>
+						<p><a id="toservice" class="btn btn-success btn-small" href="#">Continue <i class="icon-ok icon-white"></i></a></p>
 						</div>
 					</div>
 					<!--/span-->

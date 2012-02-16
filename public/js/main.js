@@ -225,7 +225,7 @@ $(document).ready(function() {
 										}
 										else
 										{
-											alert("We're sorry. This location is not in the 49th Ward.\r\n"+theAddress);
+												alert("We're sorry. This location is not in the 49th Ward.\r\n"+theAddress);
 										}
 									}
 									else
