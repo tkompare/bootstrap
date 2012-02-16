@@ -78,7 +78,7 @@
 				<div class="row-fluid">
 					<div id="heading-map" class="span6">
 						<h2>The Map</h2>
-						<div id="map-themap" style="width:100%; height:200px; margin:10px; auto;">
+						<div id="map-themap" style="width:95%; height:200px; margin:5px; auto;">
 						<!-- The Google map goes here. -->
 						</div>
 						<p><a id="uselocation" class="btn btn-primary btn-small">Use this location <i class="icon-ok icon-white"></i></a></p>
