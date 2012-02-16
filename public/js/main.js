@@ -15,26 +15,31 @@ $(document).ready(function() {
 		$(".nav-collapse").collapse('hide');
 	});
 	$("#toservice,#thenav-service").click(function() {
-		$("#section-home,#section-location,#section-contact").hide("fast");
+		$("#section-home,#section-location,#section-contact,#heading-map").hide("fast");
 		$("#section-service").show("fast");
 		$("#linav-home,#linav-location,#linav-contact").removeClass('active');
 		$("#linav-service").addClass('active');
 		$(".nav-collapse").collapse('hide');
 	});
 	$("#tocontact,#thenav-contact").click(function() {
-		$("#section-home,#section-location,#section-service").hide("fast");
+		$("#section-home,#section-location,#section-service,#heading-map").hide("fast");
 		$("#section-contact").show("fast");
 		$("#linav-home,#linav-location,#linav-service").removeClass('active');
 		$("#linav-contact").addClass('active');
 		$(".nav-collapse").collapse('hide');
 	});
 	$("#seemap").click(function() {
+		$('#heading-address').removeClass('span12');
+		$('#heading-address').addClass('span6');
 		$("#heading-map").show("fast", function(){
 			loadMap('map-themap');
 		});
 	});
 	$("#uselocation").click(function() {
+		TheMap = false;
 		$("#heading-map").hide("fast");
+		$('#heading-address').removeClass('span6');
+		$('#heading-address').addClass('span12');
 	});
 	function loadMap(mapdomobject)
 	{
@@ -103,8 +108,6 @@ $(document).ready(function() {
 					 * Center the map on the user's location
 					 */
 					TheMap.setCenter(MyLocation);
-					
-					//ward49poly.setMap(TheMap);
 					/*
 					 * Create the user's marker and put it on the map
 					 */
@@ -119,10 +122,8 @@ $(document).ready(function() {
 						}
 					);
 					/*
-					 * Bounce the marker on the map. Super cheesy.
+					 * Watch the user's device GPS for new location.
 					 */
-					MarkerYou.setAnimation(google.maps.Animation.BOUNCE);
-					// Watch the user's device GPS for new location.
 					var Watcher = navigator.geolocation.watchPosition
 					(
 						/*
@@ -171,10 +172,6 @@ $(document).ready(function() {
 								navigator.geolocation.clearWatch(Watcher);
 								Watcher = false;
 							}
-							/*
-							 * Stop the animation
-							 */
-							MarkerYou.setAnimation(null);
 						}
 					);
 					google.maps.event.addListener
@@ -191,17 +188,13 @@ $(document).ready(function() {
 								navigator.geolocation.clearWatch(Watcher);
 								Watcher = false;
 							}
-							/*
-							 * Stop the animation
-							 */
-							MarkerYou.setAnimation(null);
 						}
 					);
 					/*
 					 * Listen for the map page to be closed and stop listening
 					 * to the user's device location service.
 					 */
-					$('#uselocation').live('click',function()
+					$('#uselocation,#toservice,#thenav-service,#thenav-home,#thenav-contact').live('click',function()
 						{
 							if(Watcher != false)
 							{
@@ -229,20 +222,10 @@ $(document).ready(function() {
 											$("#address-direction").val(addressArray[1].replace(",",""));
 											$("#address-streetname").val(addressArray[2].replace(",",""));
 											$("#address-suffix").val(addressArray[3].replace(",",""));
-										/*	$.mobile.changePage('address.php', {
-												type:'get',
-												data:'number='+addressArray[0].replace(",","")+
-													'&direction='+addressArray[1].replace(",","")+
-													'&name='+addressArray[2].replace(",","")+
-													'&suffix='+addressArray[3].replace(",",""),
-												reloadPage:true,
-												transition:'slide'
-											});
-										*/
 										}
 										else
 										{
-											alert("We're sorry. This ocation is not in the 49th Ward.\r\n"+theAddress);
+											alert("We're sorry. This location is not in the 49th Ward.\r\n"+theAddress);
 										}
 									}
 									else

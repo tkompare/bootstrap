@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Bootstrap, from Twitter</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
 	<meta name="description" content="">
 	<meta name="author" content="">
 	
@@ -58,7 +58,7 @@
 	<div class="container-fluid">
 		<div class="row-fluid">
 			<div class="span12">
-				<div id="section-home" class="hero-unit">
+				<div id="section-home">
 					<h2>Chicago 311 Services</h2>
 					<ol>
 						<li>Find Your Location</li>
@@ -66,7 +66,7 @@
 						<li>Give Us The Details</li>
 						<li>Enter Your Contact Information For Follow-Up</li>
 					</ol>
-					<p><a id="start" class="btn btn-primary btn-small">Start &raquo;</a></p>
+					<p><a id="start" class="btn btn-success btn-small">Start <i class="icon-ok icon-white"></i></a></p>
 				</div>
 			</div>
 		</div>
@@ -78,30 +78,30 @@
 				<div class="row-fluid">
 					<div id="heading-map" class="span6">
 						<h2>The Map</h2>
-						<div id="map-themap" style="width:100%; height:200px">
+						<div id="map-themap" style="width:100%; height:200px; margin:10px; auto;">
 						<!-- The Google map goes here. -->
 						</div>
-						<p>A container that holds a google map will go here</p>
-						<p><a id="uselocation" class="btn btn-small">Use this location &raquo;</a></p>
+						<p><a id="uselocation" class="btn btn-primary btn-small">Use this location <i class="icon-ok icon-white"></i></a></p>
 					</div>
 					<!--/span-->
 					<div id="heading-address" class="span12">
 						<h2>Address</h2>
+						<p><a id="seemap" class="btn btn-primary btn-small">Use GPS <i class="icon-map-marker icon-white"></i></a></p>
 						<div class="row-fluid">
 						<div class="address-input span6">
 						<label for="address-number">Number</label>
-						<input id="address-number" name="address[number]" type="text" class="address-input span6" placeholder="123">
+						<input id="address-number" name="address[number]" type="text" class="span9" placeholder="123">
 						<label for="address-direction">Direction</label>
-						<input id="address-direction" name="address[direction]" type="text" class="address-input span6" placeholder="W">
+						<input id="address-direction" name="address[direction]" type="text" class="span9" placeholder="W">
 						</div>
 						<div class="address-input span6">
 						<label for="address-streetname">Street Name</label>
-						<input id="address-streetname" name="address[streetname]" type="text" class="address-input span6" placeholder="Madison">
+						<input id="address-streetname" name="address[streetname]" type="text" class="span9" placeholder="Madison">
 						<label for="address-suffix">Street Suffix</label>
-						<input id="address-suffix" name="address[suffix]" type="text" class="address-input span6" placeholder="Ave">
+						<input id="address-suffix" name="address[suffix]" type="text" class="span9" placeholder="Ave">
 						</div>
+						<p><a id="toservice" class="btn btn-success btn-small">Continue <i class="icon-ok icon-white"></i></a></p>
 						</div>
-						<p><a id="seemap" class="btn btn-small">See Map &raquo;</a></p>
 					</div>
 					<!--/span-->
 				</div>
@@ -160,7 +160,7 @@
 		<!--/row-->
 		<hr>
 		<footer>
-			<p>&copy; Company 2012</p>
+			<p>&copy; Tom Kompare 2012</p>
 		</footer>
 	</div>
 	<!--/.fluid-container-->
